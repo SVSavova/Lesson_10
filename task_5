@@ -1,0 +1,26 @@
+/*
+Направете програма Palindrome, която прочита дума от конзолата
+и проверява дали е палиндром.
+mom, radar, kok
+ */
+
+import java.util.Scanner;
+
+public class task_palindrome {
+    public static void main(String[] args) {
+
+        String word, reverse = ""; // Objects of String class
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a string or number: ");
+        word = in.nextLine();
+        int length = word.length();
+
+        for (int i = length - 1; i >= 0; i--) {
+            reverse = reverse + word.charAt(i);
+        }
+
+        if (word.equals(reverse)) {
+            System.out.println("It is a palindrome.");
+        } else System.out.println("It is not a palindrome.");
+    }
+}
